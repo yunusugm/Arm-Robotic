@@ -1,0 +1,26 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+
+  @media only screen and (max-width: 650px) {
+    font-size: 50%;
+  }
+}
+
+body {
+  padding: 2rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  box-sizing: border-box;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #e8e8e8;
+}

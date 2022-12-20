@@ -1,0 +1,15 @@
+{
+  "name": "micro-arm",
+  "version": "1.0.0",
+  "description": "Repo for final project microcontroler",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "sass sass/main.scss css/main.css -w",
+    "compile:sass": "sass sass/main.scss css/main.comp.css"
+  },
+  "author": "Yunus",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.57.1"
+  }
+}

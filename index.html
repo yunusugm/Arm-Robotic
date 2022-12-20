@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <title>Robotic Arm</title>
+  </head>
+  <body>
+    <h1 class="header">Robotic Arm</h1>
+    <nav class="nav">
+      <li class="nav__item">
+        <a href="#" class="nav__link">Manual</a>
+      </li>
+      <li class="nav__item">
+        <a href="#" class="nav__link">Automatic</a>
+      </li>
+    </nav>
+
+    <div class="arm">
+      <h2 class="arm__name">Base</h2>
+    </div>
+    <div class="sliders">
+      <div class="range">
+        <div class="sliderValue">
+          <span id="val1">0</span>
+        </div>
+        <div class="field">
+          <div class="value left">0</div>
+          <input
+            type="range"
+            min="0"
+            max="180"
+            value="0"
+            steps="1"
+            id="inVal1"
+          />
+          <div class="value right">180</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="arm">
+      <h2 class="arm__name">Shoulder</h2>
+    </div>
+    <div class="sliders">
+      <div class="range">
+        <div class="sliderValue">
+          <span id="val2">0</span>
+        </div>
+        <div class="field">
+          <div class="value left">0</div>
+          <input
+            type="range"
+            min="0"
+            max="180"
+            value="0"
+            steps="1"
+            id="inVal2"
+          />
+          <div class="value right">180</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="arm">
+      <h2 class="arm__name">Elbow</h2>
+    </div>
+    <div class="sliders">
+      <div class="range">
+        <div class="sliderValue">
+          <span id="val3">0</span>
+        </div>
+        <div class="field">
+          <div class="value left">0</div>
+          <input
+            type="range"
+            min="0"
+            max="180"
+            value="0"
+            steps="1"
+            id="inVal3"
+          />
+          <div class="value right">180</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="arm">
+      <h2 class="arm__name">Wrist</h2>
+    </div>
+    <div class="sliders">
+      <div class="range">
+        <div class="sliderValue">
+          <span id="val4">0</span>
+        </div>
+        <div class="field">
+          <div class="value left">0</div>
+          <input
+            type="range"
+            min="0"
+            max="180"
+            value="0"
+            steps="1"
+            id="inVal4"
+          />
+          <div class="value right">180</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="arm">
+      <h2 class="arm__name">Grip</h2>
+    </div>
+    <div class="sliders">
+      <div class="range">
+        <div class="sliderValue">
+          <span id="val5">0</span>
+        </div>
+        <div class="field">
+          <div class="value left">0</div>
+          <input
+            type="range"
+            min="0"
+            max="180"
+            value="0"
+            steps="1"
+            id="inVal5"
+          />
+          <div class="value right">180</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="containers">
+      <div class="btn-container">
+        <button class="btn">
+          <span class="btn__top">Task 1</span>
+        </button>
+      </div>
+      <div class="btn-container">
+        <button class="btn">
+          <span class="btn__top">Task 2</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="containers">
+      <div class="btn-container">
+        <button class="btn">
+          <span class="btn__top">Task 3</span>
+        </button>
+      </div>
+      <div class="btn-container">
+        <button class="btn">
+          <span class="btn__top">Task 4</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="containers">
+      <div class="btn-container">
+        <button class="btn">
+          <span class="btn__top">Reset</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- <button class="btn">
+      <span class="btn__top">Button</span>
+    </button> -->
+
+    <script src="index.js"></script>
+  </body>
+</html>
