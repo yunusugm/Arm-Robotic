@@ -1,3 +1,17 @@
+const firebaseConfig = {
+  apiKey: "AIzaSyDAFpY6Lk2Gvu-BrcN5jEpoZec6jxucDgM",
+  authDomain: "armrobotic-997b9.firebaseapp.com",
+  databaseURL:
+    "https://armrobotic-997b9-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "armrobotic-997b9",
+  storageBucket: "armrobotic-997b9.appspot.com",
+  messagingSenderId: "445188418246",
+  appId: "1:445188418246:web:a38e78d5985260b9bb05c7",
+  measurementId: "G-WZ26JV1V7J",
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
 const slideValue = document.querySelectorAll(
   "#val1, #val2, #val3, #val4, #val5"
 );
@@ -15,6 +29,7 @@ const inputSlider = document.querySelectorAll(
 // };
 
 console.log(slideValue);
+console.log(inputSlider);
 
 for (let i = 0; i < inputSlider.length; i++) {
   const input = inputSlider[i];
@@ -27,7 +42,92 @@ for (let i = 0; i < inputSlider.length; i++) {
     slide.classList.add("show");
   };
 
-  input.onblur = () => {
+  // input.onblur = () => {
+  //   slide.classList.remove("show");
+  // };
+
+  document.addEventListener("click", () => {
     slide.classList.remove("show");
-  };
+  });
 }
+
+const task1 = document.getElementById("task1");
+const task2 = document.getElementById("task2");
+const task3 = document.getElementById("task3");
+const task4 = document.getElementById("task4");
+const reset = document.getElementById("reset");
+
+const base = document.getElementById("inVal1");
+const shoulder = document.getElementById("inVal2");
+const elbow = document.getElementById("inVal3");
+const wrist = document.getElementById("inVal4");
+const grip = document.getElementById("inVal5");
+
+const connectFirebase = () => {
+  let db = firebase.database();
+  let angleRef = "angle/";
+  let modeRef = "mode/";
+  let taskRef = db.ref(modeRef).child("task");
+
+  reset.addEventListener("click", () => {
+    taskRef.set(0);
+    console.log("mode 0");
+  });
+
+  task1.addEventListener("click", () => {
+    taskRef.set(1);
+    console.log("mode 1");
+  });
+
+  task2.addEventListener("click", () => {
+    taskRef.set(2);
+    console.log("mode 2");
+  });
+
+  task3.addEventListener("click", () => {
+    taskRef.set(3);
+    console.log("mode 3");
+  });
+
+  task4.addEventListener("click", () => {
+    taskRef.set(4);
+    console.log("mode 4");
+  });
+
+  base.addEventListener("input", () => {
+    let baseVal = base.value;
+    let ref = db.ref(angleRef).child("base");
+    ref.set(parseInt(baseVal));
+    console.log(`base val ${baseVal}`);
+  });
+
+  shoulder.addEventListener("input", () => {
+    let shoulderVal = shoulder.value;
+    let ref = db.ref(angleRef).child("shoulder");
+    ref.set(parseInt(shoulderVal));
+    console.log(`shoulder val ${shoulderVal}`);
+  });
+
+  elbow.addEventListener("input", () => {
+    let elbowVal = elbow.value;
+    let ref = db.ref(angleRef).child("elbow");
+    ref.set(parseInt(elbowVal));
+    console.log(`elbow val ${elbowVal}`);
+  });
+
+  wrist.addEventListener("input", () => {
+    let wristVal = wrist.value;
+    let ref = db.ref(angleRef).child("wrist");
+    ref.set(parseInt(wristVal));
+    console.log(`wrist val ${wristVal}`);
+  });
+
+  grip.addEventListener("input", () => {
+    let gripVal = grip.value;
+    let ref = db.ref(angleRef).child("grip");
+    ref.set(parseInt(gripVal));
+    console.log(`grip val ${gripVal}`);
+  });
+};
+
+document.addEventListener("DOMContentLoaded", connectFirebase);
