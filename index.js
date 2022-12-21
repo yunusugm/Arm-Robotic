@@ -38,7 +38,12 @@ for (let i = 0; i < inputSlider.length; i++) {
   input.oninput = () => {
     let value = input.value;
     slide.textContent = value;
-    slide.style.left = value / 2 + "%";
+    if (input.max == 180) {
+      slide.style.left = value / 2 + "%";
+    } else {
+      slide.style.left = value / 4 + "%";
+    }
+
     slide.classList.add("show");
   };
 
@@ -62,6 +67,12 @@ const shoulder = document.getElementById("inVal2");
 const elbow = document.getElementById("inVal3");
 const wrist = document.getElementById("inVal4");
 const grip = document.getElementById("inVal5");
+
+const baseText = document.getElementById("baseN");
+const shoulderText = document.getElementById("shoulderN");
+const elbowText = document.getElementById("elbowN");
+const wristText = document.getElementById("wristN");
+const gripText = document.getElementById("gripN");
 
 const connectFirebase = () => {
   let db = firebase.database();
@@ -128,6 +139,41 @@ const connectFirebase = () => {
     ref.set(parseInt(gripVal));
     console.log(`grip val ${gripVal}`);
   });
+
+  db.ref(angleRef)
+    .child("base")
+    .on("value", (snap) => {
+      baseText.innerHTML = "";
+      baseText.innerHTML += `Base: ${snap.val()} deg`;
+    });
+
+  db.ref(angleRef)
+    .child("grip")
+    .on("value", (snap) => {
+      gripText.innerHTML = "";
+      gripText.innerHTML += `Grip: ${snap.val()} deg`;
+    });
+
+  db.ref(angleRef)
+    .child("shoulder")
+    .on("value", (snap) => {
+      shoulderText.innerHTML = "";
+      shoulderText.innerHTML += `Shoulder: ${snap.val()} deg`;
+    });
+
+  db.ref(angleRef)
+    .child("elbow")
+    .on("value", (snap) => {
+      elbowText.innerHTML = "";
+      elbowText.innerHTML += `Elbow: ${snap.val()} deg`;
+    });
+
+  db.ref(angleRef)
+    .child("wrist")
+    .on("value", (snap) => {
+      wristText.innerHTML = "";
+      wristText.innerHTML += `Wrist: ${snap.val()} deg`;
+    });
 };
 
 document.addEventListener("DOMContentLoaded", connectFirebase);
