@@ -74,6 +74,9 @@ const elbowText = document.getElementById("elbowN");
 const wristText = document.getElementById("wristN");
 const gripText = document.getElementById("gripN");
 
+const manual = document.getElementById("manual");
+const auto = document.getElementById("auto");
+
 const connectFirebase = () => {
   let db = firebase.database();
   let angleRef = "angle/";
@@ -138,6 +141,16 @@ const connectFirebase = () => {
     let ref = db.ref(angleRef).child("grip");
     ref.set(parseInt(gripVal));
     console.log(`grip val ${gripVal}`);
+  });
+
+  manual.addEventListener("click", () => {
+    let ref = db.ref(modeRef).child("arm");
+    ref.set(0);
+  });
+
+  auto.addEventListener("click", () => {
+    let ref = db.ref(modeRef).child("arm");
+    ref.set(1);
   });
 
   db.ref(angleRef)
