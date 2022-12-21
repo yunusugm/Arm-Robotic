@@ -1,11 +1,13 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyDB8Y-_VfXcO4XRM4qYk_0annWYOUbTev4",
-  authDomain: "robotarm-ebc03.firebaseapp.com",
-  projectId: "robotarm-ebc03",
-  storageBucket: "robotarm-ebc03.appspot.com",
-  messagingSenderId: "882042111312",
-  appId: "1:882042111312:web:af701129f887bd4ba29855",
-  measurementId: "G-LV06ZGKWB6",
+  apiKey: "AIzaSyDAFpY6Lk2Gvu-BrcN5jEpoZec6jxucDgM",
+  authDomain: "armrobotic-997b9.firebaseapp.com",
+  databaseURL:
+    "https://armrobotic-997b9-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "armrobotic-997b9",
+  storageBucket: "armrobotic-997b9.appspot.com",
+  messagingSenderId: "445188418246",
+  appId: "1:445188418246:web:a38e78d5985260b9bb05c7",
+  measurementId: "G-WZ26JV1V7J",
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
