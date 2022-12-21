@@ -1,13 +1,12 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyDAFpY6Lk2Gvu-BrcN5jEpoZec6jxucDgM",
-  authDomain: "armrobotic-997b9.firebaseapp.com",
-  databaseURL:
-    "https://armrobotic-997b9-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "armrobotic-997b9",
-  storageBucket: "armrobotic-997b9.appspot.com",
-  messagingSenderId: "445188418246",
-  appId: "1:445188418246:web:a38e78d5985260b9bb05c7",
-  measurementId: "G-WZ26JV1V7J",
+  apiKey: "AIzaSyBo-XNbeCo-Wi5nSEur740YSbFGQQxU3NU",
+  authDomain: "armfix-b84a8.firebaseapp.com",
+  databaseURL: "https://armfix-b84a8-default-rtdb.firebaseio.com",
+  projectId: "armfix-b84a8",
+  storageBucket: "armfix-b84a8.appspot.com",
+  messagingSenderId: "346453177882",
+  appId: "1:346453177882:web:aec16f20f737415c6d43a3",
+  measurementId: "G-N5TR64F8Y5",
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
