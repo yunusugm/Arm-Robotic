@@ -37,11 +37,8 @@ for (let i = 0; i < inputSlider.length; i++) {
   input.oninput = () => {
     let value = input.value;
     slide.textContent = value;
-    if (input.max == 180) {
-      slide.style.left = value / 2 + "%";
-    } else {
-      slide.style.left = value / 4 + "%";
-    }
+
+    slide.style.left = value / 2 + "%";
 
     slide.classList.add("show");
   };
