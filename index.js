@@ -114,7 +114,7 @@ const connectFirebase = () => {
   shoulder.addEventListener("input", () => {
     let shoulderVal = shoulder.value;
     let ref = db.ref(angleRef).child("shoulder");
-    ref.set(parseInt(shoulderVal));
+    ref.set(parseInt((shoulderVal - 180) * -1));
     console.log(`shoulder val ${shoulderVal}`);
   });
 
