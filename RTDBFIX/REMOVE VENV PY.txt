@@ -1,0 +1,31 @@
+source venv/bin/activate
+pip freeze > requirements.txt
+pip uninstall -r requirements.txt -y
+deactivate
+rm -r venv/
+
+
+npx npkill REMOVE NODE MODULES
+
+powercfg /batteryreport /output “C:\battery-report.html”
+
+Bismillahirrahmanirrahim
+Assalamualaikum wr. wb
+
+📢 [FIRST GATHERING] 📢
+
+WELCOME TO THE TEAM ✈️
+
+Halo teman - teman GAMAFORCE tercinta ♥️♥️ untuk memulai periode GAMAFORCE yang baru serta menyambut temen - temen baru kita, bakal diadain First Gathering GAMAFORCE 2023 secara online nih...
+
+Pada :
+🗓️ : Selasa, 27 Desember 2022
+🕑 : 19.00 WIB - tepar
+🏡 : https://bit.ly/FirstGathGMF2023
+Vbg : bit.ly/VBGFGGAMAFORCE2023
+👘 : Bebas asal sopan
+
+Diharapkan kehadiran teman-teman semuanya yaa,
+jangan lupa dicatet hari dan tanggalnyaa yaa...
+
+yuk kita rameiin acaranya buat kenalan dan sharing-sharing, ditunggu kehadiran teman-teman semuaa ✨✨
